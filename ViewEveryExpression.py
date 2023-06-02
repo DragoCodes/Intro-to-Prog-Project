@@ -15,9 +15,11 @@ plt.figure(0, figsize = (12,20))
 cpt = 0
 
 for emotion in os.listdir(path + "train"):
+	#Taking 5 images of each Emotion
 	for i in range(5):
 		cpt=cpt+1
 		plt.subplot(7,5,cpt)
 		img = load_img(path + "train/" + emotion + "/" +os.listdir(path + "train/" + emotion)[i], target_size=(photosize, photosize)))
 		plt.imshow(img, cmap = "gray")
+#To show the images using matplotlib
 plt.show()
