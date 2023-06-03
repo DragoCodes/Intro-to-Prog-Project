@@ -105,6 +105,15 @@ class A_MainWindow(object):
         self.pushButton_2.clicked.connect(self.image_det)
         self.pushButton_2.setGeometry(QtCore.QRect(400, 190, 131, 41))
         self.pushButton_2.setObjectName("pushButton_2")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(260, 30, 251, 61))
+        font = QtGui.QFont()
+        font.setFamily("Segoe Print")
+        font.setPointSize(24)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -119,6 +128,7 @@ class A_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Live Detection"))
         self.pushButton_2.setText(_translate("MainWindow",
                                              "Browse for Pictures"))
+        self.label_2.setText(_translate("MainWindow", "FaceDontLie"))
 
 
 if __name__ == "__main__":
