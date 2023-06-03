@@ -3,3 +3,4 @@ seaborn
 matplotlib
 keras
 opencv-contrib-python
+PyQt5
