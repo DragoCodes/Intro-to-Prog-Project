@@ -1,3 +1,4 @@
+# Imported nececessary libraries
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 import numpy as np
@@ -5,7 +6,7 @@ import cv2
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 import copy
-
+# Using pre-trained model 'model_weights.h5' 
 text_list = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 newmodel = load_model('model_weights.h5')
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades +
