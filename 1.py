@@ -7,8 +7,9 @@ import matplotlib.pyplot as plt
 import copy
 
 text_list = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
-newmodel=load_model('model_weights.h5')
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+newmodel = load_model('model_weights.h5')
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 
+                                     'haarcascade_frontalface_default.xml')
 
 class Ui_MainWindow(object):
     def imagedetect(self):
@@ -26,7 +27,7 @@ class Ui_MainWindow(object):
                     print("Face not detected")
                 else:
                     for (ex, ey, ew, eh) in facess:
-                        where=ew/2
+                        where = ew/2
                         face_roi = roi_color[ey:ey+eh, ex:ex+ew]
                         gray_image = cv2.cvtColor(face_roi, cv2.COLOR_BGR2GRAY)
                         resized_image = cv2.resize(gray_image, (56, 56))
@@ -61,10 +62,10 @@ class Ui_MainWindow(object):
 
                         # Pass the preprocessed input data to the model for prediction
                         prediction = newmodel.predict(np.array([input_data]))
-                        text_idx=np.argmax(prediction)
+                        text_idx = np.argmax(prediction)
                 
                         text_list = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
-                        text= text_list[text_idx]
+                        text = text_list[text_idx]
                         cv2.putText(img, text, (x, y-5),
                            cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 0, 255), 2)
                         img = cv2.rectangle(img, (x,y), (x+w, y+h), (0,0,255), 2)
