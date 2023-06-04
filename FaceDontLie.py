@@ -6,11 +6,12 @@ import cv2
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 import copy
-# Using pre-trained model 'model_weights.h5' 
-emotion_list = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
+# Using pre-trained model 'model_weights.h5'
 model = load_model('model_weights.h5')
-face_casscade = cv2.CascadeClassifier(cv2.data.haarcascades +
-                                     'haarcascade_frontalface_default.xml')
+emotion_list = ['Angry', 'Disgust', 'Fear', 'Happy',
+                'Neutral', 'Sad', 'Surprise']
+face_casscade = cv2.CascadeClassifier(
+  cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 
 class A_MainWindow(object):
@@ -72,8 +73,9 @@ class A_MainWindow(object):
                         prediction = model.predict(np.array([input_data]))
                         text_idx = np.argmax(prediction)
 
-                        emotion_list = ['Angry', 'Disgust', 'Fear',
-                                     'Happy', 'Neutral', 'Sad', 'Surprise']
+                        emotion_list = [
+                          'Angry', 'Disgust', 'Fear', 'Happy',
+                          'Neutral', 'Sad', 'Surprise']
                         text = emotion_list[text_idx]
                         cv2.putText(img, text, (x, y-5),
                                     cv2.FONT_HERSHEY_SIMPLEX,
