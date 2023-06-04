@@ -26,6 +26,9 @@ The following websites were referred to during the development of this project:
 
 - YouTube Tutorial: Face Expression Recognition Tutorial
   - Link: [https://www.youtube.com/watch?v=fkgpvkqcoJc](https://www.youtube.com/watch?v=fkgpvkqcoJc)
+  
+- YouTube Tutorial: PyQt5 Python3 Tutorial
+  - Link: [https://www.youtube.com/playlist?list=PLzMcBGfZo4-lB8MZfHPLTEHO9zJDDLpYj](https://www.youtube.com/playlist?list=PLzMcBGfZo4-lB8MZfHPLTEHO9zJDDLpYj)
 
 Images
 ### TEST CASE 1
