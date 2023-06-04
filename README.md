@@ -39,9 +39,13 @@ Images
 
 !["2"](images/Figure_2.png)
 
-### TEST CASE #
+### TEST CASE 3
 
 !["3"](images/Figure_3.png)
+
+### TEST CASE 4
+
+!["3"](images/Figure_4.png)
 
 ## Group Members
 **- Sidarth Prabhu - 132201015**
