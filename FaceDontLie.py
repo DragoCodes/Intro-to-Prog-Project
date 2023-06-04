@@ -16,9 +16,9 @@ face_casscade = cv2.CascadeClassifier(
 
 class A_MainWindow(object):
     def image_det(self):
-        self.fl = QFileDialog.getOpenFileName(filter='Image (*.*)')[0]
-        if self.fl:
-            frame = cv2.imread(self.fl)
+        self.fil = QFileDialog.getOpenFileName(filter='Image (*.*)')[0]
+        if self.fil:
+            frame = cv2.imread(self.fil)
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             faces = face_casscade.detectMultiScale(gray, 1.1, 4)
             for x, y, w, h in faces:
