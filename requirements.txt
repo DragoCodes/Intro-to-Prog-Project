@@ -2,5 +2,6 @@ numpy
 seaborn
 matplotlib
 keras
+tensorflow
 opencv-contrib-python
 PyQt5
