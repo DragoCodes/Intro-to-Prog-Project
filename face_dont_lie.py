@@ -182,7 +182,7 @@ class A_MainWindow(object):
         main_window.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.push_button.setText(_translate("MainWindow", "Live Detection"))
         self.push_button_2.setText(_translate("MainWindow",
-                                             "Browse for Pictures"))
+                                              "Browse for Pictures"))
         self.label_2.setText(_translate("MainWindow", "FaceDontLie"))
 
 
