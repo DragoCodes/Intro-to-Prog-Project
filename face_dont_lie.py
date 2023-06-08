@@ -30,7 +30,7 @@ face_casscade = CascadeClassifier(
   haarcascades + 'haarcascade_frontalface_default.xml')
 
 
-class A_MainWindow(object):
+class main_window(object):
     def __init__(self):
         """Initialization"""
         self.centralwidget = None
@@ -101,7 +101,7 @@ class A_MainWindow(object):
                           (255, 0, 0), 2)
                 facess = face_casscade.detectMultiScale(roi_gray)
                 if len(facess) == 0:
-                    print("Face not detected")
+                    print("Show Yourself!!")
                 else:
                     for (ex_coordinate,
                          ey_coordinate,
@@ -140,10 +140,10 @@ class A_MainWindow(object):
         cap.release()
         destroyAllWindows()
 
-    def setupGui(self, main_window):
+    def setupGui(self, MainWindow):
         """This function setups the main window"""
-        main_window.setObjectName("MainWindow")
-        main_window.resize(770, 441)
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(770, 441)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -168,18 +168,18 @@ class A_MainWindow(object):
         font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
-        main_window.setCentralWidget(self.centralwidget)
+        MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
-        main_window.setStatusBar(self.statusbar)
+        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslate_ui(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslate_ui(self, main_window):
+    def retranslate_ui(self, MainWindow):
         """Retranslate the user interface elements to the main window"""
         _translate = QtCore.QCoreApplication.translate
-        main_window.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.push_button.setText(_translate("MainWindow", "Live Detection"))
         self.push_button_2.setText(_translate("MainWindow",
                                               "Browse for Pictures"))
@@ -190,7 +190,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = A_MainWindow()
+    ui = main_window()
     ui.setupGui(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
